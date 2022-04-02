@@ -52,7 +52,11 @@ extension OpenAPS {
         static let meal = "monitor/meal.json"
         static let glucose = "monitor/glucose.json"
         static let iob = "monitor/iob.json"
+<<<<<<< HEAD
         static let cgmState = "monitor/cgm-state.json"
+=======
+        static let podAge = "monitor/pod-age.json"
+>>>>>>> ciage
     }
 
     enum Enact {
@@ -79,10 +83,14 @@ extension OpenAPS {
         static let uploadedTempTargets = "upload/uploaded-temptargets.json"
         static let uploadedGlucose = "upload/uploaded-glucose.json"
 <<<<<<< HEAD
+<<<<<<< HEAD
         static let uploadedCGMState = "upload/uploaded-cgm-state.json"
 =======
         static let uploadedProfile = "upload/uploaded-profile.json"
 >>>>>>> profile
+=======
+        static let uploadedPodAge = "upload/uploaded-pod-age.json"
+>>>>>>> ciage
     }
 
     enum FreeAPS {

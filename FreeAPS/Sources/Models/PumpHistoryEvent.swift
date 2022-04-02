@@ -10,7 +10,35 @@ struct PumpHistoryEvent: JSON, Equatable {
     let rate: Decimal?
     let temp: TempType?
     let carbInput: Int?
+<<<<<<< HEAD
     var note: String? = nil
+=======
+    let note: String?
+
+    init(
+        id: String,
+        type: EventType,
+        timestamp: Date,
+        amount: Decimal? = nil,
+        duration: Int? = nil,
+        durationMin: Int? = nil,
+        rate: Decimal? = nil,
+        temp: TempType? = nil,
+        carbInput: Int? = nil,
+        note: String? = nil
+    ) {
+        self.id = id
+        self.type = type
+        self.timestamp = timestamp
+        self.amount = amount
+        self.duration = duration
+        self.durationMin = durationMin
+        self.rate = rate
+        self.temp = temp
+        self.carbInput = carbInput
+        self.note = note
+    }
+>>>>>>> ciage
 }
 
 enum EventType: String, JSON {
@@ -23,6 +51,9 @@ enum EventType: String, JSON {
     case tempBasalDuration = "TempBasalDuration"
     case pumpSuspend = "PumpSuspend"
     case pumpResume = "PumpResume"
+    case pumpAlarm = "PumpAlarm"
+    case pumpBattery = "PumpBattery"
+
     case rewind = "Rewind"
     case prime = "Prime"
     case journalCarbs = "JournalEntryMealMarker"
@@ -30,6 +61,13 @@ enum EventType: String, JSON {
     case nsTempBasal = "Temp Basal"
     case nsCarbCorrection = "Carb Correction"
     case nsTempTarget = "Temporary Target"
+<<<<<<< HEAD
+=======
+    case nsInsulinChange = "Insulin Change"
+    case nsSiteChange = "Site Change"
+    case nsBatteryChange = "Pump Battery Change"
+    case nsAnnouncement = "Announcement"
+>>>>>>> ciage
     case nsSensorChange = "Sensor Start"
 }
 
